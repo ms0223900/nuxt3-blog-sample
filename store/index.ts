@@ -25,6 +25,10 @@ const useStore = defineStore("main", {
     resetViewedPost() {
       this.viewedPostList = [];
     },
+
+    setPostList(postList: SinglePost[]) {
+      this.postList = postList;
+    },
   },
   getters,
 });

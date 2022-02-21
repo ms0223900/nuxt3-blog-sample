@@ -1,7 +1,4 @@
 <template>
-  <Head>
-    <Link rel="icon" href="/favicon.ico" />
-  </Head>
   <div class="root">
     <nav class="nav-list--wrapper">
       <ul>
@@ -11,6 +8,7 @@
           </NuxtLink>
         </li>
       </ul>
+      <intl-toggle-button />
     </nav>
     <slot :key="path" />
   </div>
@@ -19,8 +17,10 @@
 <script lang="ts">
 import navList from "~~/static/navList.mock";
 import { defineComponent, PropType, toRefs } from "vue";
+import IntlToggleButton from "~~/components/Intl/IntlToggleButton.vue";
 
 export default defineComponent({
+  components: { IntlToggleButton },
   name: "DefaultLayoutWrapper",
   setup(props) {
     const route = useRoute();
