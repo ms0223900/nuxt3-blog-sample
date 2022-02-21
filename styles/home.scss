@@ -1,0 +1,9 @@
+.container {
+  margin: auto;
+  max-width: 1200px;
+
+  > h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+}
