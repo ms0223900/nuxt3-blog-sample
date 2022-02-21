@@ -15,7 +15,7 @@ const getters: _GettersTree<State> = {
   getViewedPostAmount: (s) => s.viewedPostList.length,
 };
 
-const useStore = defineStore("main", {
+const useStore = defineStore<string, State, typeof getters>("main", {
   state,
   actions: {
     addViewedPost(newPost: SinglePost) {
@@ -27,7 +27,7 @@ const useStore = defineStore("main", {
     },
 
     setPostList(postList: SinglePost[]) {
-      this.postList = postList;
+      this.allPostList = postList;
     },
   },
   getters,

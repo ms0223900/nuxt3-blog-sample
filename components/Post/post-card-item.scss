@@ -1,0 +1,16 @@
+.post-card-item {
+  box-sizing: border-box;
+  padding: 1rem;
+  // max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 1rem;
+
+  > h2 {
+    font-size: 24px;
+  }
+
+  > p {
+    line-height: 1.6;
+  }
+}

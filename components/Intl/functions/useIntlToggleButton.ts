@@ -10,8 +10,12 @@ const useIntlToggleButton = () => {
     }
   });
 
+  const intlBtnTitle = computed(() =>
+    locale.value === LocaleEnum.en ? LocaleEnum.zh : LocaleEnum.en
+  );
+
   return {
-    locale,
+    locale: intlBtnTitle,
     handleToggle,
   };
 };
